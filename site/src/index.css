@@ -221,6 +221,9 @@ body {
   --borg-sys-color-bg: #f0fdf4;
   --borg-sys-color-fg: #022c22;
   --borg-sys-color-card: #ffffff;
+  --borg-sys-color-card-fg: #022c22;
+  --borg-sys-color-popover: #ffffff;
+  --borg-sys-color-popover-fg: #022c22;
   --borg-sys-color-muted: #d1fae5;
   --borg-sys-color-muted-fg: #059669;
   --borg-sys-color-accent: #d1fae5;
@@ -241,6 +244,9 @@ body {
   --borg-sys-color-bg: #022c22;
   --borg-sys-color-fg: #ecfdf5;
   --borg-sys-color-card: #064e3b;
+  --borg-sys-color-card-fg: #ecfdf5;
+  --borg-sys-color-popover: #064e3b;
+  --borg-sys-color-popover-fg: #ecfdf5;
   --borg-sys-color-muted: #064e3b;
   --borg-sys-color-muted-fg: #a7f3d0;
   --borg-sys-color-accent: #065f46;
@@ -253,45 +259,51 @@ body {
   --gallery-card: #064e3b;
   --gallery-muted-bg: #065f46;
 }
-.theme-solaris-light {
-  --borg-sys-color-primary: #3971b8;
-  --borg-sys-color-primary-fg: #fff;
-  --borg-sys-color-secondary: #c8d69b;
-  --borg-sys-color-secondary-fg: #2a3010;
-  --borg-sys-color-bg: #fbfcef;
-  --borg-sys-color-fg: #343b1b;
-  --borg-sys-color-card: #fff;
-  --borg-sys-color-muted: #f0f1e5;
-  --borg-sys-color-muted-fg: #6b7040;
-  --borg-sys-color-accent: #f6e6a5;
-  --borg-sys-color-accent-fg: #5c4d1a;
-  --borg-sys-color-border: #343b1b;
-  --gallery-bg: #fbfcef;
-  --gallery-fg: #343b1b;
-  --gallery-muted: #6b7040;
-  --gallery-border: #343b1b;
-  --gallery-card: #fff;
-  --gallery-muted-bg: #f0f1e5;
+.theme-solarized-light {
+  --borg-sys-color-primary: #268bd2;     /* blue */
+  --borg-sys-color-primary-fg: #fdf6e3;  /* base3 */
+  --borg-sys-color-secondary: #2aa198;   /* cyan */
+  --borg-sys-color-secondary-fg: #fdf6e3;/* base3 */
+  --borg-sys-color-bg: #fdf6e3;          /* base3 */
+  --borg-sys-color-fg: #657b83;          /* base00 */
+  --borg-sys-color-card: #eee8d5;        /* base2 */
+  --borg-sys-color-card-fg: #657b83;     /* base00 */
+  --borg-sys-color-popover: #eee8d5;     /* base2 */
+  --borg-sys-color-popover-fg: #657b83;  /* base00 */
+  --borg-sys-color-muted: #eee8d5;       /* base2 */
+  --borg-sys-color-muted-fg: #93a1a1;    /* base1 */
+  --borg-sys-color-accent: #eee8d5;      /* base2 */
+  --borg-sys-color-accent-fg: #b58900;   /* yellow */
+  --borg-sys-color-border: #93a1a1;      /* base1 */
+  --gallery-bg: #fdf6e3;                 /* base3 */
+  --gallery-fg: #657b83;                 /* base00 */
+  --gallery-muted: #93a1a1;              /* base1 */
+  --gallery-border: #93a1a1;             /* base1 */
+  --gallery-card: #eee8d5;               /* base2 */
+  --gallery-muted-bg: #eee8d5;           /* base2 */
 }
-.theme-solaris-dark {
-  --borg-sys-color-primary: #60a5fa;
-  --borg-sys-color-primary-fg: #0f172a;
-  --borg-sys-color-secondary: #8ba144;
-  --borg-sys-color-secondary-fg: #f7f9ef;
-  --borg-sys-color-bg: #2d2f1f;
-  --borg-sys-color-fg: #e8ead8;
-  --borg-sys-color-card: #343b1b;
-  --borg-sys-color-muted: #343b1b;
-  --borg-sys-color-muted-fg: #e8ead8;
-  --borg-sys-color-accent: #5c4d1a;
-  --borg-sys-color-accent-fg: #f6e6a5;
-  --borg-sys-color-border: #e8ead8;
-  --gallery-bg: #2d2f1f;
-  --gallery-fg: #e8ead8;
-  --gallery-muted: #c8d69b;
-  --gallery-border: #e8ead8;
-  --gallery-card: #343b1b;
-  --gallery-muted-bg: #343b1b;
+.theme-solarized-dark {
+  --borg-sys-color-primary: #268bd2;     /* blue */
+  --borg-sys-color-primary-fg: #002b36;  /* base03 */
+  --borg-sys-color-secondary: #2aa198;   /* cyan */
+  --borg-sys-color-secondary-fg: #002b36;/* base03 */
+  --borg-sys-color-bg: #002b36;          /* base03 */
+  --borg-sys-color-fg: #839496;          /* base0 */
+  --borg-sys-color-card: #073642;        /* base02 */
+  --borg-sys-color-card-fg: #839496;     /* base0 */
+  --borg-sys-color-popover: #073642;     /* base02 */
+  --borg-sys-color-popover-fg: #839496;  /* base0 */
+  --borg-sys-color-muted: #073642;       /* base02 */
+  --borg-sys-color-muted-fg: #586e75;    /* base01 */
+  --borg-sys-color-accent: #073642;      /* base02 */
+  --borg-sys-color-accent-fg: #b58900;   /* yellow */
+  --borg-sys-color-border: #586e75;      /* base01 */
+  --gallery-bg: #002b36;                 /* base03 */
+  --gallery-fg: #839496;                 /* base0 */
+  --gallery-muted: #586e75;              /* base01 */
+  --gallery-border: #586e75;             /* base01 */
+  --gallery-card: #073642;               /* base02 */
+  --gallery-muted-bg: #073642;           /* base02 */
 }
 .theme-ocean-light {
   --borg-sys-color-primary: #2563eb;
@@ -301,6 +313,9 @@ body {
   --borg-sys-color-bg: #f8fafc;
   --borg-sys-color-fg: #0f172a;
   --borg-sys-color-card: #fff;
+  --borg-sys-color-card-fg: #0f172a;
+  --borg-sys-color-popover: #fff;
+  --borg-sys-color-popover-fg: #0f172a;
   --borg-sys-color-muted: #e2e8f0;
   --borg-sys-color-muted-fg: #475569;
   --borg-sys-color-accent: #e0f2fe;
@@ -321,6 +336,9 @@ body {
   --borg-sys-color-bg: #0f172a;
   --borg-sys-color-fg: #e2e8f0;
   --borg-sys-color-card: #1e293b;
+  --borg-sys-color-card-fg: #e2e8f0;
+  --borg-sys-color-popover: #1e293b;
+  --borg-sys-color-popover-fg: #e2e8f0;
   --borg-sys-color-muted: #334155;
   --borg-sys-color-muted-fg: #cbd5e1;
   --borg-sys-color-accent: #1e40af;

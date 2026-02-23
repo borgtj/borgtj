@@ -40,6 +40,13 @@ import {
     TooltipContent,
     TooltipProvider,
     TooltipTrigger,
+    AlertDialog,
+    AlertDialogContent,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogAction,
 } from "@borgtj/react";
 import "@borgtj/react/styles.css";
 import {
@@ -62,14 +69,23 @@ import { THEMES, type ThemeId } from "./config/themes";
 function App() {
     const [loading, setLoading] = useState(false);
     const [otp, setOtp] = useState("");
-    const [themeId, setThemeId] = useState<ThemeId>("solaris-light");
+    const [themeId, setThemeId] = useState<ThemeId>("borg-dark");
+    const [alertOpen, setAlertOpen] = useState(false);
+    const [alertMessage, setAlertMessage] = useState("");
+
+    const handleAlert = (msg: string) => {
+        setAlertMessage(msg);
+        setAlertOpen(true);
+    };
 
     useEffect(() => {
         document.documentElement.classList.remove(
-            "theme-solaris-light",
-            "theme-solaris-dark",
+            "theme-solarized-light",
+            "theme-solarized-dark",
             "theme-ocean-light",
             "theme-ocean-dark",
+            "theme-borg-light",
+            "theme-borg-dark",
         );
         document.documentElement.classList.add("theme-" + themeId);
     }, [themeId]);
@@ -888,7 +904,9 @@ function App() {
                                     </ContextMenuTrigger>
                                     <ContextMenuContent>
                                         <ContextMenuItem
-                                            onSelect={() => alert("Copied!")}
+                                            onSelect={() =>
+                                                handleAlert("Copied!")
+                                            }
                                         >
                                             <Copy
                                                 size={16}
@@ -898,7 +916,11 @@ function App() {
                                             />
                                             Copy
                                         </ContextMenuItem>
-                                        <ContextMenuItem>
+                                        <ContextMenuItem
+                                            onSelect={() =>
+                                                handleAlert("Profile clicked")
+                                            }
+                                        >
                                             <User
                                                 size={16}
                                                 style={{
@@ -907,7 +929,12 @@ function App() {
                                             />
                                             Profile
                                         </ContextMenuItem>
-                                        <ContextMenuItem variant="destructive">
+                                        <ContextMenuItem
+                                            variant="destructive"
+                                            onSelect={() =>
+                                                handleAlert("Logged out")
+                                            }
+                                        >
                                             <LogOut
                                                 size={16}
                                                 style={{
@@ -941,6 +968,26 @@ function App() {
                             </DemoBlock>
                         </div>
                     </GallerySection>
+
+                    <AlertDialog open={alertOpen} onOpenChange={setAlertOpen}>
+                        <AlertDialogContent>
+                            <AlertDialogHeader>
+                                <AlertDialogTitle>
+                                    Action Confirmed
+                                </AlertDialogTitle>
+                                <AlertDialogDescription>
+                                    {alertMessage}
+                                </AlertDialogDescription>
+                            </AlertDialogHeader>
+                            <AlertDialogFooter>
+                                <AlertDialogAction
+                                    onClick={() => setAlertOpen(false)}
+                                >
+                                    OK
+                                </AlertDialogAction>
+                            </AlertDialogFooter>
+                        </AlertDialogContent>
+                    </AlertDialog>
 
                     <footer className="gallery-footer">
                         Component Gallery · @borgtj/react

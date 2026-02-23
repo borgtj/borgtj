@@ -2,7 +2,8 @@
 export const THEMES = [
     { id: "borg-light", label: "Borg Light" },
     { id: "borg-dark", label: "Borg Dark" },
-    { id: "solaris-light", label: "Solaris Light" },
+    { id: "solarized-light", label: "Solarized Light" },
+    { id: "solarized-dark", label: "Solarized Dark" },
     { id: "ocean-light", label: "Ocean Light" },
     { id: "ocean-dark", label: "Ocean Dark" },
 ] as const;

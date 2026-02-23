@@ -2,5 +2,5 @@
 # 详见 https://pnpm.io/workspaces
 packages:
     - "packages/*"
-    - "apps/*"
+    - "demos/*"
     - "site/"
