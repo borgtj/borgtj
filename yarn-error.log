@@ -1,0 +1,62 @@
+Arguments: 
+  /Users/albert.li/.volta/tools/image/node/22.12.0/bin/node /Users/albert.li/.volta/tools/image/yarn/1.22.19/bin/yarn.js global dir --json
+
+PATH: 
+  /Users/albert.li/.volta/tools/image/npm/10.9.0/bin:/Users/albert.li/.volta/tools/image/yarn/1.22.19/bin:/Users/albert.li/.volta/tools/image/node/22.12.0/bin:/Users/albert.li/.local/bin:/opt/homebrew/opt/dotnet@8/bin:/Users/albert.li/.bun/bin:/Users/albert.li/.antigravity/antigravity/bin:/opt/homebrew/opt/postgresql@14/bin:/Users/albert.li/.volta/bin:/Users/albert.li/Library/pnpm:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pmk/env/global/bin:/Library/Apple/usr/bin:/usr/local/MacGPG2/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  22.12.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Volumes/ORICO/ws/prj/borgtj/borgtj/package.json: Expected ':' after property name in JSON at position 381 (line 16 column 5)
+      at JSON.parse (<anonymous>)
+      at /Users/albert.li/.volta/tools/image/yarn/1.22.19/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/Users/albert.li/.volta/tools/image/yarn/1.22.19/lib/cli.js:310:30)
+      at /Users/albert.li/.volta/tools/image/yarn/1.22.19/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "borgtj",
+    "version": "0.0.1",
+    "private": true,
+    "packageManager": "pnpm@9.15.0",
+    "scripts": {
+      "build": "turbo run build",
+      "test": "turbo run test",
+      "lint": "turbo run lint",
+      "graph": "turbo graph",
+      "demo": "turbo run storybook --filter=demo",
+      "build-demo": "turbo run build-storybook --filter=demo"
+    },
+    "devDependencies": {
+      ""
+      "@testing-library/jest-dom": "^6.9.1",
+      "@testing-library/react": "^16.3.2",
+      "@types/node": "^22.10.1",
+      "@types/react": "^18.3.12",
+      "@types/react-dom": "^18.3.1",
+      "@vitejs/plugin-react": "^4.3.4",
+      "eslint": "^9.16.0",
+      "jest": "^29.7.0",
+      "jest-environment-jsdom": "^29.7.0",
+      "react": "^18.3.1",
+      "react-dom": "^18.3.1",
+      "ts-jest": "^29.4.6",
+      "turbo": "^2.3.0",
+      "typescript": "~5.6.2",
+      "vite": "^6.0.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

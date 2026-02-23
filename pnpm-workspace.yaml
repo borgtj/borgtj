@@ -1,0 +1,6 @@
+# pnpm 工作区：可共享 React 组件 monorepo
+# 详见 https://pnpm.io/workspaces
+packages:
+    - "packages/*"
+    - "apps/*"
+    - "site/"

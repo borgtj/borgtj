@@ -1,0 +1,12 @@
+{
+    "projectName": "borgtj",
+    "packageManager": "pnpm",
+    "demos": [
+        {
+            "name": "site",
+            "value": "site",
+            "description": "Site",
+            "package": "@borgtj/site"
+        }
+    ]
+}
