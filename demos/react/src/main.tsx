@@ -1,8 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-/* 必须在 @borgtj/react 样式之后加载，否则 :root 会覆盖 theme 的 --borg-sys-* */
 import './index.css'
+import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

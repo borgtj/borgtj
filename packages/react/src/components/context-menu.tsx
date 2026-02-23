@@ -6,10 +6,39 @@ import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-react";
 
 import { cn } from "../lib/utils";
 
+/** 用于在选中菜单项时关闭菜单的 Context */
+const ContextMenuCloseContext = React.createContext<(() => void) | null>(null);
+
 function ContextMenu({
+    open: openProp,
+    onOpenChange,
     ...props
 }: React.ComponentProps<typeof ContextMenuPrimitive.Root>) {
-    return <ContextMenuPrimitive.Root data-slot="context-menu" {...props} />;
+    const [openUncontrolled, setOpenUncontrolled] = React.useState(false);
+    const isControlled = openProp !== undefined;
+    const setOpen = React.useCallback(
+        (value: boolean) => {
+            if (isControlled) {
+                onOpenChange?.(value);
+            } else {
+                setOpenUncontrolled(value);
+                onOpenChange?.(value);
+            }
+        },
+        [isControlled, onOpenChange],
+    );
+    const closeMenu = React.useCallback(() => setOpen(false), [setOpen]);
+
+    return (
+        <ContextMenuCloseContext.Provider value={closeMenu}>
+            <ContextMenuPrimitive.Root
+                data-slot="context-menu"
+                open={isControlled ? openProp : openUncontrolled}
+                onOpenChange={setOpen}
+                {...props}
+            />
+        </ContextMenuCloseContext.Provider>
+    );
 }
 
 function ContextMenuTrigger({
@@ -118,11 +147,20 @@ function ContextMenuItem({
     className,
     inset,
     variant = "default",
+    onSelect,
     ...props
 }: React.ComponentProps<typeof ContextMenuPrimitive.Item> & {
     inset?: boolean;
     variant?: "default" | "destructive";
 }) {
+    const closeMenu = React.useContext(ContextMenuCloseContext);
+    const handleSelect = React.useCallback(
+        (event: Event) => {
+            onSelect?.(event);
+            closeMenu?.();
+        },
+        [onSelect, closeMenu],
+    );
     return (
         <ContextMenuPrimitive.Item
             data-slot="context-menu-item"
@@ -135,6 +173,7 @@ function ContextMenuItem({
                     : "",
                 className,
             )}
+            onSelect={handleSelect}
             {...props}
         />
     );
@@ -144,8 +183,17 @@ function ContextMenuCheckboxItem({
     className,
     children,
     checked,
+    onSelect,
     ...props
 }: React.ComponentProps<typeof ContextMenuPrimitive.CheckboxItem>) {
+    const closeMenu = React.useContext(ContextMenuCloseContext);
+    const handleSelect = React.useCallback(
+        (event: Event) => {
+            onSelect?.(event);
+            closeMenu?.();
+        },
+        [onSelect, closeMenu],
+    );
     return (
         <ContextMenuPrimitive.CheckboxItem
             data-slot="context-menu-checkbox-item"
@@ -154,6 +202,7 @@ function ContextMenuCheckboxItem({
                 className,
             )}
             checked={checked}
+            onSelect={handleSelect}
             {...props}
         >
             <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
@@ -169,8 +218,17 @@ function ContextMenuCheckboxItem({
 function ContextMenuRadioItem({
     className,
     children,
+    onSelect,
     ...props
 }: React.ComponentProps<typeof ContextMenuPrimitive.RadioItem>) {
+    const closeMenu = React.useContext(ContextMenuCloseContext);
+    const handleSelect = React.useCallback(
+        (event: Event) => {
+            onSelect?.(event);
+            closeMenu?.();
+        },
+        [onSelect, closeMenu],
+    );
     return (
         <ContextMenuPrimitive.RadioItem
             data-slot="context-menu-radio-item"
@@ -178,6 +236,7 @@ function ContextMenuRadioItem({
                 "focus:bg-accent focus:text-accent-foreground outline-hidden relative flex cursor-default select-none items-center gap-2 rounded-sm py-1.5 pl-8 pr-2 text-sm data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
                 className,
             )}
+            onSelect={handleSelect}
             {...props}
         >
             <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">

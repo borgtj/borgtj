@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="borg-icon">
+  <defs>
+    <linearGradient id="borgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+  </defs>
+  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="url(#borgGrad)"></path>
+  <polyline points="3.29 7 12 12 20.71 7" stroke="url(#borgGrad)"></polyline>
+  <line x1="12" y1="22" x2="12" y2="12" stroke="url(#borgGrad)"></line>
+  <circle cx="12" cy="12" r="2.5" fill="url(#borgGrad)" stroke="none"></circle>
+  <path d="m12 12 4.5-2.5" stroke="url(#borgGrad)" opacity="0.5"></path>
+  <path d="m12 12-4.5-2.5" stroke="url(#borgGrad)" opacity="0.5"></path>
+  <circle cx="12" cy="2.5" r="1" fill="url(#borgGrad)" stroke="none"></circle>
+  <circle cx="21" cy="7.5" r="1" fill="url(#borgGrad)" stroke="none"></circle>
+  <circle cx="21" cy="16.5" r="1" fill="url(#borgGrad)" stroke="none"></circle>
+  <circle cx="12" cy="21.5" r="1" fill="url(#borgGrad)" stroke="none"></circle>
+  <circle cx="3" cy="16.5" r="1" fill="url(#borgGrad)" stroke="none"></circle>
+  <circle cx="3" cy="7.5" r="1" fill="url(#borgGrad)" stroke="none"></circle>
+</svg>

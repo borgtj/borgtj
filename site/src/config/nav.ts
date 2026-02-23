@@ -1,6 +1,7 @@
 /** 组件画廊侧栏导航项 */
 export const GALLERY_NAV = [
   { id: "overview", label: "Overview" },
+  { id: "design-system", label: "Design System" },
   { id: "tokens", label: "Design Tokens" },
   { id: "button", label: "Button" },
   { id: "forms", label: "Forms & Inputs" },

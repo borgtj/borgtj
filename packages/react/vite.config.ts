@@ -30,6 +30,7 @@ export default defineConfig(({ mode }) => {
             react(),
             dts({
                 include: ["src"],
+                exclude: ["**/*.test.ts", "**/*.test.tsx"],
                 insertTypesEntry: true,
             }),
         ],

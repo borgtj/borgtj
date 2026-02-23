@@ -212,6 +212,137 @@ body {
   color: var(--gallery-muted);
 }
 
+/* Design system theme overrides — applied to whole site when class is on root */
+.theme-borg-light {
+  --borg-sys-color-primary: #10b981;
+  --borg-sys-color-primary-fg: #ffffff;
+  --borg-sys-color-secondary: #a7f3d0;
+  --borg-sys-color-secondary-fg: #064e3b;
+  --borg-sys-color-bg: #f0fdf4;
+  --borg-sys-color-fg: #022c22;
+  --borg-sys-color-card: #ffffff;
+  --borg-sys-color-muted: #d1fae5;
+  --borg-sys-color-muted-fg: #059669;
+  --borg-sys-color-accent: #d1fae5;
+  --borg-sys-color-accent-fg: #047857;
+  --borg-sys-color-border: #6ee7b7;
+  --gallery-bg: #f0fdf4;
+  --gallery-fg: #022c22;
+  --gallery-muted: #059669;
+  --gallery-border: #6ee7b7;
+  --gallery-card: #ffffff;
+  --gallery-muted-bg: #d1fae5;
+}
+.theme-borg-dark {
+  --borg-sys-color-primary: #34d399;
+  --borg-sys-color-primary-fg: #022c22;
+  --borg-sys-color-secondary: #059669;
+  --borg-sys-color-secondary-fg: #ecfdf5;
+  --borg-sys-color-bg: #022c22;
+  --borg-sys-color-fg: #ecfdf5;
+  --borg-sys-color-card: #064e3b;
+  --borg-sys-color-muted: #064e3b;
+  --borg-sys-color-muted-fg: #a7f3d0;
+  --borg-sys-color-accent: #065f46;
+  --borg-sys-color-accent-fg: #6ee7b7;
+  --borg-sys-color-border: #047857;
+  --gallery-bg: #022c22;
+  --gallery-fg: #ecfdf5;
+  --gallery-muted: #a7f3d0;
+  --gallery-border: #047857;
+  --gallery-card: #064e3b;
+  --gallery-muted-bg: #065f46;
+}
+.theme-solaris-light {
+  --borg-sys-color-primary: #3971b8;
+  --borg-sys-color-primary-fg: #fff;
+  --borg-sys-color-secondary: #c8d69b;
+  --borg-sys-color-secondary-fg: #2a3010;
+  --borg-sys-color-bg: #fbfcef;
+  --borg-sys-color-fg: #343b1b;
+  --borg-sys-color-card: #fff;
+  --borg-sys-color-muted: #f0f1e5;
+  --borg-sys-color-muted-fg: #6b7040;
+  --borg-sys-color-accent: #f6e6a5;
+  --borg-sys-color-accent-fg: #5c4d1a;
+  --borg-sys-color-border: #343b1b;
+  --gallery-bg: #fbfcef;
+  --gallery-fg: #343b1b;
+  --gallery-muted: #6b7040;
+  --gallery-border: #343b1b;
+  --gallery-card: #fff;
+  --gallery-muted-bg: #f0f1e5;
+}
+.theme-solaris-dark {
+  --borg-sys-color-primary: #60a5fa;
+  --borg-sys-color-primary-fg: #0f172a;
+  --borg-sys-color-secondary: #8ba144;
+  --borg-sys-color-secondary-fg: #f7f9ef;
+  --borg-sys-color-bg: #2d2f1f;
+  --borg-sys-color-fg: #e8ead8;
+  --borg-sys-color-card: #343b1b;
+  --borg-sys-color-muted: #343b1b;
+  --borg-sys-color-muted-fg: #e8ead8;
+  --borg-sys-color-accent: #5c4d1a;
+  --borg-sys-color-accent-fg: #f6e6a5;
+  --borg-sys-color-border: #e8ead8;
+  --gallery-bg: #2d2f1f;
+  --gallery-fg: #e8ead8;
+  --gallery-muted: #c8d69b;
+  --gallery-border: #e8ead8;
+  --gallery-card: #343b1b;
+  --gallery-muted-bg: #343b1b;
+}
+.theme-ocean-light {
+  --borg-sys-color-primary: #2563eb;
+  --borg-sys-color-primary-fg: #fff;
+  --borg-sys-color-secondary: #0ea5e9;
+  --borg-sys-color-secondary-fg: #fff;
+  --borg-sys-color-bg: #f8fafc;
+  --borg-sys-color-fg: #0f172a;
+  --borg-sys-color-card: #fff;
+  --borg-sys-color-muted: #e2e8f0;
+  --borg-sys-color-muted-fg: #475569;
+  --borg-sys-color-accent: #e0f2fe;
+  --borg-sys-color-accent-fg: #0369a1;
+  --borg-sys-color-border: #cbd5e1;
+  --gallery-bg: #f8fafc;
+  --gallery-fg: #0f172a;
+  --gallery-muted: #475569;
+  --gallery-border: #cbd5e1;
+  --gallery-card: #fff;
+  --gallery-muted-bg: #e2e8f0;
+}
+.theme-ocean-dark {
+  --borg-sys-color-primary: #93c5fd;
+  --borg-sys-color-primary-fg: #1e3a8a;
+  --borg-sys-color-secondary: #38bdf8;
+  --borg-sys-color-secondary-fg: #0f172a;
+  --borg-sys-color-bg: #0f172a;
+  --borg-sys-color-fg: #e2e8f0;
+  --borg-sys-color-card: #1e293b;
+  --borg-sys-color-muted: #334155;
+  --borg-sys-color-muted-fg: #cbd5e1;
+  --borg-sys-color-accent: #1e40af;
+  --borg-sys-color-accent-fg: #bfdbfe;
+  --borg-sys-color-border: #475569;
+  --gallery-bg: #0f172a;
+  --gallery-fg: #e2e8f0;
+  --gallery-muted: #94a3b8;
+  --gallery-border: #475569;
+  --gallery-card: #1e293b;
+  --gallery-muted-bg: #334155;
+}
+
+.theme-preview-box {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--gallery-border);
+  min-height: 6rem;
+  background: var(--borg-sys-color-bg);
+  color: var(--borg-sys-color-fg);
+}
+
 @media (max-width: 768px) {
   .demo-grid-2 {
     grid-template-columns: 1fr;
