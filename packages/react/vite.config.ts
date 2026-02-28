@@ -29,6 +29,8 @@ export default defineConfig(({ mode }) => {
         plugins: [
             react(),
             dts({
+                root: __dirname,
+                tsconfigPath: resolve(__dirname, "tsconfig.json"),
                 include: ["src"],
                 exclude: ["**/*.test.ts", "**/*.test.tsx"],
                 insertTypesEntry: true,
