@@ -10,10 +10,12 @@
         "lint": "turbo run lint",
         "graph": "turbo graph",
         "demo": "turbo run storybook --filter=demo",
-        "build-demo": "turbo run build-storybook --filter=demo"
+        "build-demo": "turbo run build-storybook --filter=demo",
+        "prepare": "husky"
     },
     "devDependencies": {
         "@systembug/pangu": "^0.0.12",
+        "husky": "^9.1.7",
         "@testing-library/jest-dom": "^6.9.1",
         "@testing-library/react": "^16.3.2",
         "@types/node": "^22.10.1",
