@@ -1,6 +1,13 @@
 {
     "name": "@borgtj/react",
     "version": "0.1.0",
+    "description": "React design system with tokens, theming, and Radix-based components (no Tailwind).",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/your-org/borgtj",
+        "directory": "packages/react"
+    },
     "type": "module",
     "main": "./dist/index.cjs",
     "module": "./dist/index.mjs",

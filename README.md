@@ -1,13 +1,12 @@
 # borgtj
 
-pnpm + Turbo 管理的 React 共享组件 monorepo。
+pnpm + Turbo 管理的 React 设计系统 monorepo。
 
 ## 结构
 
-- `packages/components`：共享 React 组件库 `@borgtj/components`
-- `packages/react`：设计系统组件库 `@borgtj/react`
-- `apps/demo`：Storybook 演示，依赖 `@borgtj/components`
-- `site`：组件画廊（纯 CSS，无 Tailwind），依赖 `@borgtj/react`
+- **packages/react** — 设计系统组件库 `@borgtj/react`（可发布到 npm）
+- **demos/react** — Storybook 演示 `@borgtj/react-ui-demo`
+- **site** — 组件画廊（纯 CSS，无 Tailwind），部署到 GitHub Pages
 
 ## 命令
 
@@ -17,14 +16,12 @@ pnpm install
 
 # 构建所有包
 pnpm build
-# 或
-turbo run build
 
 # 测试
 pnpm test
 
-# 仅构建 components
-turbo run build --filter=@borgtj/components
+# 仅构建 @borgtj/react
+pnpm exec turbo run build --filter=@borgtj/react
 
 # 启动 Storybook 演示
 pnpm demo
@@ -36,18 +33,27 @@ pnpm build-demo
 pnpm graph
 ```
 
-## 使用共享组件
+## 使用 @borgtj/react
 
 在应用或其它包中：
 
 ```ts
-import { Button } from '@borgtj/components';
+import { Button } from "@borgtj/react";
+import "@borgtj/react/styles.css";
 ```
 
 在对应 `package.json` 的 `dependencies` 中添加：
 
 ```json
-"@borgtj/components": "workspace:*"
+"@borgtj/react": "workspace:*"
 ```
 
-然后 `pnpm install` 即可。
+然后 `pnpm install` 即可。发布到 npm 时改为具体版本号。
+
+## 发布前检查
+
+- [x] `pnpm build` 通过
+- [x] `pnpm test` 通过（@borgtj/react 26 用例）
+- [x] `pnpm lint` 通过
+- [x] 根目录与 site 为 `private: true`，不发布
+- [ ] 若发布 **@borgtj/react** 到 npm：在 `packages/react/package.json` 中补充 `repository`、`license`、`description`
