@@ -28,31 +28,37 @@ function Tooltip({
     );
 }
 
-function TooltipTrigger({
-    ...props
-}: React.ComponentProps<typeof TooltipPrimitive.Trigger>) {
-    return <TooltipPrimitive.Trigger data-slot="tooltip-trigger" {...props} />;
-}
+const TooltipTrigger = React.forwardRef<
+    React.ElementRef<typeof TooltipPrimitive.Trigger>,
+    React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Trigger>
+>(({ ...props }, ref) => (
+    <TooltipPrimitive.Trigger
+        ref={ref}
+        data-slot="tooltip-trigger"
+        {...props}
+    />
+));
+TooltipTrigger.displayName = TooltipPrimitive.Trigger.displayName;
 
-function TooltipContent({
-    className,
-    sideOffset = 0,
-    children,
-    ...props
-}: React.ComponentProps<typeof TooltipPrimitive.Content>) {
-    return (
-        <TooltipPrimitive.Portal>
-            <TooltipPrimitive.Content
-                data-slot="tooltip-content"
-                sideOffset={sideOffset}
-                className={cn("borg-tooltip-content", className)}
-                {...props}
-            >
-                {children}
-                <TooltipPrimitive.Arrow className="borg-tooltip-arrow" />
-            </TooltipPrimitive.Content>
-        </TooltipPrimitive.Portal>
-    );
-}
+const TooltipContent = React.forwardRef<
+    React.ElementRef<typeof TooltipPrimitive.Content>,
+    React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content> & {
+        sideOffset?: number;
+    }
+>(({ className, sideOffset = 0, children, ...props }, ref) => (
+    <TooltipPrimitive.Portal>
+        <TooltipPrimitive.Content
+            ref={ref}
+            data-slot="tooltip-content"
+            sideOffset={sideOffset}
+            className={cn("borg-tooltip-content", className)}
+            {...props}
+        >
+            {children}
+            <TooltipPrimitive.Arrow className="borg-tooltip-arrow" />
+        </TooltipPrimitive.Content>
+    </TooltipPrimitive.Portal>
+));
+TooltipContent.displayName = TooltipPrimitive.Content.displayName;
 
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider };
