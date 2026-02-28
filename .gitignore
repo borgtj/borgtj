@@ -1,8 +1,37 @@
+# Dependencies
 node_modules
+.pnpm-store
+
+# Build & Turbo
 dist
-.nx
-*.tsbuildinfo
-coverage
-.env
-.env.local
 .turbo
+*.tsbuildinfo
+storybook-static
+.next
+!.next/cache
+
+# Test & coverage
+coverage
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE & OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Legacy (Nx removed)
+.nx
