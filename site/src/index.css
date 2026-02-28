@@ -229,6 +229,7 @@ body {
   --borg-sys-color-accent: #d1fae5;
   --borg-sys-color-accent-fg: #047857;
   --borg-sys-color-border: #6ee7b7;
+  --borg-sys-color-overlay: rgba(0, 0, 0, 0.5);
   --gallery-bg: #f0fdf4;
   --gallery-fg: #022c22;
   --gallery-muted: #059669;
@@ -252,6 +253,7 @@ body {
   --borg-sys-color-accent: #065f46;
   --borg-sys-color-accent-fg: #6ee7b7;
   --borg-sys-color-border: #047857;
+  --borg-sys-color-overlay: rgba(0, 0, 0, 0.6);
   --gallery-bg: #022c22;
   --gallery-fg: #ecfdf5;
   --gallery-muted: #a7f3d0;
@@ -275,6 +277,7 @@ body {
   --borg-sys-color-accent: #eee8d5;      /* base2 */
   --borg-sys-color-accent-fg: #b58900;   /* yellow */
   --borg-sys-color-border: #93a1a1;      /* base1 */
+  --borg-sys-color-overlay: rgba(0, 0, 0, 0.5);
   --gallery-bg: #fdf6e3;                 /* base3 */
   --gallery-fg: #657b83;                 /* base00 */
   --gallery-muted: #93a1a1;              /* base1 */
@@ -298,6 +301,7 @@ body {
   --borg-sys-color-accent: #073642;      /* base02 */
   --borg-sys-color-accent-fg: #b58900;   /* yellow */
   --borg-sys-color-border: #586e75;      /* base01 */
+  --borg-sys-color-overlay: rgba(0, 0, 0, 0.6);
   --gallery-bg: #002b36;                 /* base03 */
   --gallery-fg: #839496;                 /* base0 */
   --gallery-muted: #586e75;              /* base01 */
@@ -321,6 +325,7 @@ body {
   --borg-sys-color-accent: #e0f2fe;
   --borg-sys-color-accent-fg: #0369a1;
   --borg-sys-color-border: #cbd5e1;
+  --borg-sys-color-overlay: rgba(0, 0, 0, 0.5);
   --gallery-bg: #f8fafc;
   --gallery-fg: #0f172a;
   --gallery-muted: #475569;
@@ -344,6 +349,7 @@ body {
   --borg-sys-color-accent: #1e40af;
   --borg-sys-color-accent-fg: #bfdbfe;
   --borg-sys-color-border: #475569;
+  --borg-sys-color-overlay: rgba(0, 0, 0, 0.6);
   --gallery-bg: #0f172a;
   --gallery-fg: #e2e8f0;
   --gallery-muted: #94a3b8;

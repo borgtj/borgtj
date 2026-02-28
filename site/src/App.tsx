@@ -166,7 +166,7 @@ function App() {
                             }}
                         >
                             <img
-                                src="/borg.svg"
+                                src={`${import.meta.env.BASE_URL}borg.svg`}
                                 alt="Borg Logo"
                                 style={{
                                     width: "2.5rem",

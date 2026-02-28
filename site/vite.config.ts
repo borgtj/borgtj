@@ -9,10 +9,24 @@ const getBase = () => {
     return "/";
 };
 
+const base = getBase();
+
 // https://vite.dev/config/
 export default defineConfig({
-    base: getBase(),
-    plugins: [react()],
+    base,
+    plugins: [
+        react(),
+        // 构建时把 index.html 里绝对路径的静态资源加上 base，避免 GitHub Pages 子路径下 404
+        {
+            name: "html-base",
+            transformIndexHtml(html) {
+                return html.replace(
+                    /(href|src)="\/(?!\/)([^"]+\.(svg|png|ico|webp))/g,
+                    (_, attr, path) => `${attr}="${base}${path}"`
+                );
+            },
+        },
+    ],
     resolve: {
         dedupe: ["react", "react-dom"],
     },

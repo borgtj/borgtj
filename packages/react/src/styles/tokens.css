@@ -56,6 +56,9 @@
     --borg-p-red-500:         #ef4444;
     --borg-p-red-600:         #dc2626;
 
+    /* Fluence Orange (icon-badge variant) */
+    --borg-p-color-fluence-orange: #f59e0b;
+
     /* Spacing & Borders */
     --borg-p-space-1:         0.25rem;
     --borg-p-space-2:         0.5rem;
@@ -97,6 +100,7 @@
     --borg-sys-color-border:       var(--borg-sys-color-fg);
     --borg-sys-color-input:        #d4d6c8;
     --borg-sys-color-ring:         var(--borg-sys-color-primary);
+    --borg-sys-color-overlay:      rgba(0, 0, 0, 0.5);
 
     /* Typography */
     --borg-sys-font-display:       "Quicksand", sans-serif;
@@ -119,4 +123,5 @@
     --borg-sys-color-muted:        #343b1b;
     --borg-sys-color-muted-fg:     #e8ead8;
     --borg-sys-color-border:       #e8ead8;
+    --borg-sys-color-overlay:      rgba(0, 0, 0, 0.6);
 }

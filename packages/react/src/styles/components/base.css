@@ -224,8 +224,12 @@
     color: var(--borg-p-color-fluence-orange);
 }
 .borg-icon-badge--green {
-    background-color: rgba(34, 197, 94, 0.1);
-    color: rgb(34, 197, 94);
+    background-color: color-mix(
+        in srgb,
+        var(--borg-sys-color-secondary),
+        transparent 90%
+    );
+    color: var(--borg-sys-color-secondary-fg);
 }
 
 .borg-icon-badge--size-sm {
@@ -800,7 +804,7 @@
     position: fixed;
     inset: 0;
     z-index: 50;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--borg-sys-color-overlay);
     backdrop-filter: blur(4px);
 }
 .borg-overlay[data-state="open"] {
@@ -919,7 +923,7 @@
 .borg-card-toggle-thumb {
     width: 0.75rem;
     height: 0.75rem;
-    background-color: #fff;
+    background-color: var(--borg-sys-color-card);
     border-radius: 9999px;
     position: absolute;
     top: 0.125rem;
