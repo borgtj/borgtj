@@ -12,7 +12,11 @@
         "demo": "turbo run storybook --filter=demo",
         "build-demo": "turbo run build-storybook --filter=demo",
         "prepare": "husky",
-        "qingniao": "qingniao"
+        "changeset": "changeset",
+        "changeset:version": "changeset version",
+        "changeset:publish": "changeset publish",
+        "changeset:status": "changeset status",
+        "release": "qingniao"
     },
     "devDependencies": {
         "@systembug/pangu": "^0.0.12",
