@@ -34,6 +34,8 @@ export default defineConfig(({ mode }) => {
                 include: ["src"],
                 exclude: ["**/*.test.ts", "**/*.test.tsx"],
                 insertTypesEntry: true,
+                // 仅生成声明，减轻类型检查负载，避免卡住
+                compilerOptions: { skipLibCheck: true },
             }),
         ],
         build: {

@@ -8,11 +8,15 @@
         "build": "turbo run build",
         "test": "turbo run test",
         "lint": "turbo run lint",
+        "format:check": "prettier --check .",
+        "format:write": "prettier --write .",
         "graph": "turbo graph",
         "demo": "turbo run storybook --filter=demo",
         "build-demo": "turbo run build-storybook --filter=demo",
         "prepare": "husky",
         "changeset": "changeset",
+        "typecheck": "turbo run typecheck",
+        "typescheck": "pnpm run typecheck",
         "changeset:version": "changeset version",
         "changeset:publish": "changeset publish",
         "changeset:status": "changeset status",
@@ -37,6 +41,7 @@
         "ts-jest": "^29.4.6",
         "turbo": "^2.3.0",
         "typescript": "~5.6.2",
-        "vite": "^7.3.1"
+        "vite": "^7.3.1",
+        "prettier": "^3.4.2"
     }
 }
