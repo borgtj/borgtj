@@ -24,11 +24,23 @@
         "dist",
         "src"
     ],
+    "sideEffects": [
+        "**/*.css"
+    ],
+    "keywords": [
+        "react",
+        "design-system",
+        "components",
+        "radix",
+        "theming",
+        "tokens"
+    ],
     "scripts": {
         "build": "vite build && pnpm run build:css",
         "build:css": "vite build --mode css",
         "dev": "vite build --watch && pnpm run build:css --watch",
-        "test": "jest --config jest.config.cjs"
+        "test": "jest --config jest.config.cjs",
+        "prepublishOnly": "pnpm run build"
     },
     "dependencies": {
         "@radix-ui/react-accordion": "^1.2.12",

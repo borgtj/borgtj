@@ -56,4 +56,6 @@ import "@borgtj/react/styles.css";
 - [x] `pnpm test` 通过（@borgtj/react 26 用例）
 - [x] `pnpm lint` 通过
 - [x] 根目录与 site 为 `private: true`，不发布
-- [ ] 若发布 **@borgtj/react** 到 npm：在 `packages/react/package.json` 中补充 `repository`、`license`、`description`
+- [x] `packages/react` 已含 `description`、`license`、`repository`、`keywords`、`sideEffects`、`prepublishOnly`
+- [x] 根目录已含 `LICENSE`（MIT）
+- [ ] **发布 @borgtj/react 到 npm 前**：将 `packages/react/package.json` 中 `repository.url` 改为实际仓库地址（如 `https://github.com/your-org/borgtj`），然后在 `packages/react` 下执行 `pnpm publish --access public`
