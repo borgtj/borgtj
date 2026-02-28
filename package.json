@@ -11,10 +11,13 @@
         "graph": "turbo graph",
         "demo": "turbo run storybook --filter=demo",
         "build-demo": "turbo run build-storybook --filter=demo",
-        "prepare": "husky"
+        "prepare": "husky",
+        "qingniao": "qingniao"
     },
     "devDependencies": {
         "@systembug/pangu": "^0.0.12",
+        "@changesets/cli": "^2.29.5",
+        "@systembug/qingniao": "^0.0.12",
         "husky": "^9.1.7",
         "@testing-library/jest-dom": "^6.9.1",
         "@testing-library/react": "^16.3.2",
