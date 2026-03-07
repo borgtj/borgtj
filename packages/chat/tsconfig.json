@@ -17,7 +17,8 @@
         "jsx": "react-jsx",
         "baseUrl": ".",
         "paths": {
-            "@borgtj/react": ["../react/src"]
+            "@borgtj/react": ["../react/src"],
+            "@/*": ["../react/src/*"]
         }
     },
     "include": ["src/**/*"]
