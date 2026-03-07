@@ -379,8 +379,9 @@ export default function App() {
     return (
         <div
             style={{
-                height: "100vh",
-                width: "100vw",
+                height: "100%",
+                width: "100%",
+                overflow: "hidden",
                 backgroundColor: "#e8e9ed",
                 display: "flex",
                 alignItems: "flex-end",

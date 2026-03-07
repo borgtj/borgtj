@@ -36,6 +36,13 @@
     --borg-sys-color-input: #334155;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 body {
     background-color: var(--borg-sys-color-bg);
     color: var(--borg-sys-color-fg);
