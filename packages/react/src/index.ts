@@ -49,3 +49,6 @@ export * from "./components/use-mobile";
 export * from "./components/icon-badge";
 export * from "./components/card-toggle";
 export * from "./components/action-button";
+export * from "./components/shell";
+export * from "./components/composer";
+export * from "./components/fab";

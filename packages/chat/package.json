@@ -1,0 +1,40 @@
+{
+    "name": "@borgtj/chat",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "files": [
+        "dist",
+        "src"
+    ],
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite",
+        "test": "vitest run"
+    },
+    "dependencies": {
+        "@borgtj/react": "workspace:*",
+        "lucide-react": "^0.474.0"
+    },
+    "peerDependencies": {
+        "react": "^18 || ^19",
+        "react-dom": "^18 || ^19"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-react-swc": "^3.10.2",
+        "vite": "^7.3.1",
+        "vite-plugin-dts": "^4.5.3",
+        "typescript": "^5.0.0",
+        "vitest": "^2.1.8"
+    }
+}

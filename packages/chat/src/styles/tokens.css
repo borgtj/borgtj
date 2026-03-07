@@ -1,0 +1,31 @@
+/**
+ * @borgtj/chat component tokens
+ * Mapped to @borgtj/react semantic tokens by default
+ */
+
+:root {
+    /* Message Bubbles — matching shared mockup */
+    --borg-chat-bubble-radius:      18px;
+
+    /* User bubble: blue, right-aligned */
+    --borg-chat-user-bubble-bg:     #3b82f6;
+    --borg-chat-user-bubble-fg:     #ffffff;
+
+    /* Bot bubble: light gray, left-aligned */
+    --borg-chat-bot-bubble-bg:      #f1f5f9;
+    --borg-chat-bot-bubble-fg:      #1e293b;
+
+    /* Sidebar */
+    --borg-chat-sidebar-bg:         #f1f5f9;
+
+    /* Content area */
+    --borg-chat-content-bg:         #ffffff;
+    --borg-chat-border-color:       #e2e8f0;
+
+    /* Input composer */
+    --borg-chat-input-bg:           #f1f5f9;
+    --borg-chat-input-radius:       9999px;
+
+    /* FAB */
+    --borg-chat-fab-bg:             #c4d99c;
+}

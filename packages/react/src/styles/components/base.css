@@ -1625,3 +1625,20 @@
 .borg-animate-spin {
     animation: borg-spin 1s linear infinite;
 }
+/* ============================================================
+   FAB (.borg-fab)
+   ============================================================ */
+.borg-fab {
+    z-index: 50;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.borg-fab--chat {
+    background-color: #c4d99c; /* Light green from design */
+    color: white;
+    border: 2px solid white;
+}
+.borg-fab--chat:hover {
+    background-color: #b8cc90;
+}

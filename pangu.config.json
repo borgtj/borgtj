@@ -7,6 +7,18 @@
             "value": "site",
             "description": "Site",
             "package": "@borgtj/site"
+        },
+        {
+            "name": "react",
+            "value": "react",
+            "description": "React UI Demo",
+            "package": "@borgtj/react-ui-demo"
+        },
+        {
+            "name": "chat",
+            "value": "chat",
+            "description": "React Chat Demo",
+            "package": "@borgtj/react-chat-demo"
         }
     ]
 }
