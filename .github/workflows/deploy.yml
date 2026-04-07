@@ -46,13 +46,22 @@ jobs:
             - name: Install dependencies
               run: pnpm install
 
-            - name: Build project
+            - name: Build site
               run: pnpm exec turbo run build --filter=@borgtj/site
+
+            - name: Build Chat Demo
+              run: pnpm exec turbo run build --filter=@borgtj/react-chat-demo
+
+            - name: Prepare distribution
+              run: |
+                  mkdir -p dist/chat
+                  cp -rv site/dist/* dist/
+                  cp -rv demos/chat/dist/* dist/chat/
 
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
-                  path: ./site/dist
+                  path: ./dist
 
             - name: Deploy to GitHub Pages
               id: deployment

@@ -379,25 +379,25 @@ export default function App() {
     return (
         <div
             style={{
-                height: "100%",
-                width: "100%",
+                height: "100vh",
+                width: "100vw",
                 overflow: "hidden",
                 backgroundColor: "#e8e9ed",
-                display: "flex",
-                alignItems: "flex-end",
-                justifyContent: "flex-end",
-                padding: "32px",
-                boxSizing: "border-box",
+                position: "relative",
             }}
         >
             {/* Chat window */}
             {isOpen && (
                 <div
                     style={{
-                        width: "100%",
+                        position: "fixed",
+                        bottom: "32px",
+                        right: "32px",
+                        width: "calc(100% - 64px)",
                         maxWidth: "860px",
-                        height: "560px",
-                        marginBottom: "80px",
+                        height: "calc(100% - 64px)",
+                        maxHeight: "560px",
+                        zIndex: 50,
                     }}
                 >
                     <Chat
@@ -414,6 +414,7 @@ export default function App() {
                             boxShadow:
                                 "0 20px 60px rgba(0,0,0,0.18), 0 4px 16px rgba(0,0,0,0.08)",
                             border: "1px solid #d9d7ce",
+                            height: "100%",
                         }}
                     />
                 </div>
@@ -424,6 +425,9 @@ export default function App() {
                 <FAB
                     onClick={() => setIsOpen(true)}
                     style={{
+                        position: "fixed",
+                        bottom: "32px",
+                        right: "32px",
                         width: "60px",
                         height: "60px",
                         backgroundColor: "#c4d99c",
@@ -435,6 +439,7 @@ export default function App() {
                         alignItems: "center",
                         justifyContent: "center",
                         boxShadow: "0 4px 16px rgba(0,0,0,0.2)",
+                        zIndex: 50,
                     }}
                 >
                     <MessageCircle size={28} />
